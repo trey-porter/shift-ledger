@@ -67,115 +67,6 @@
     display: inline-block; padding-left: 32px; padding-right: 32px;
   }
 
-  /* ============== EMPLOYEE STRIP ============== */
-  .employee-strip {
-    display: flex; align-items: center; gap: 10px;
-    padding: 10px 36px; border-bottom: 1px solid var(--ink);
-    background: var(--paper-deep); overflow-x: auto;
-  }
-  .emp-strip-label {
-    font-family: 'JetBrains Mono', monospace; font-size: 9px;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--ink-faint); flex-shrink: 0;
-  }
-  .emp-tabs {
-    display: flex; gap: 6px; flex: 1; overflow-x: auto;
-  }
-  .emp-tab {
-    padding: 6px 14px 6px 10px; border: 1px solid var(--ink);
-    background: var(--paper); cursor: pointer;
-    font-family: 'JetBrains Mono', monospace; font-size: 11px;
-    letter-spacing: 0.04em; color: var(--ink); white-space: nowrap;
-    display: inline-flex; align-items: center; gap: 7px;
-    border-radius: 0; transition: all 0.15s ease;
-    flex-shrink: 0;
-  }
-  .emp-tab:hover { background: var(--paper-deep); }
-  .emp-tab.active {
-    background: var(--ink); color: var(--paper); font-weight: 700;
-    box-shadow: 2px 2px 0 var(--accent);
-  }
-  .emp-tab .swatch {
-    width: 9px; height: 9px; border-radius: 50%;
-    flex-shrink: 0; border: 1px solid rgba(0,0,0,0.2);
-  }
-  .emp-tab .name { font-weight: 600; }
-  .emp-tab.active .name { font-weight: 700; }
-  .emp-add-btn, .emp-manage-btn {
-    padding: 6px 12px; border: 1px dashed var(--ink-faint);
-    background: transparent; cursor: pointer;
-    font-family: 'JetBrains Mono', monospace; font-size: 10px;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--ink-soft); border-radius: 0; flex-shrink: 0;
-  }
-  .emp-add-btn:hover { color: var(--accent); border-color: var(--accent); border-style: solid; }
-  .emp-manage-btn:hover { color: var(--ink); border-color: var(--ink); border-style: solid; }
-
-  /* No-employees overlay */
-  .no-employees-overlay {
-    position: fixed; inset: 0; background: rgba(241, 234, 216, 0.96);
-    display: none; align-items: center; justify-content: center;
-    z-index: 90; padding: 20px;
-    backdrop-filter: blur(4px);
-  }
-  .no-employees-overlay.show { display: flex; }
-  .no-employees-card {
-    background: var(--paper); border: 2px solid var(--ink);
-    box-shadow: 8px 8px 0 var(--ink);
-    padding: 36px 40px; max-width: 460px; text-align: center;
-  }
-  .no-employees-card h2 {
-    font-family: 'Fraunces', serif; font-size: 28px;
-    font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px;
-  }
-  .no-employees-card h2 em { font-style: italic; color: var(--accent); font-weight: 400; }
-  .no-employees-card p {
-    font-family: 'JetBrains Mono', monospace; font-size: 11px;
-    color: var(--ink-soft); letter-spacing: 0.08em; line-height: 1.6;
-    margin-bottom: 20px; padding-bottom: 16px;
-    border-bottom: var(--hairline);
-  }
-  .no-employees-card input {
-    width: 100%; padding: 10px 12px; border: 1px solid var(--ink);
-    background: var(--paper); font-family: 'JetBrains Mono', monospace;
-    font-size: 14px; color: var(--ink); border-radius: 0;
-    margin-bottom: 12px;
-  }
-  .no-employees-card input:focus { outline: none; background: #fff; box-shadow: inset 0 0 0 1px var(--accent); }
-
-  /* Roster modal list */
-  .roster-list {
-    display: flex; flex-direction: column; gap: 6px;
-    margin-bottom: 12px;
-  }
-  .roster-item {
-    display: flex; align-items: center; gap: 10px;
-    padding: 8px 10px; border: 1px solid var(--paper-line);
-    background: var(--paper);
-  }
-  .roster-item .swatch { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; border: 1px solid rgba(0,0,0,0.2); }
-  .roster-item input.roster-name {
-    flex: 1; padding: 4px 6px; border: none;
-    border-bottom: 1px dotted var(--ink-faint);
-    background: transparent; font-family: 'JetBrains Mono', monospace;
-    font-size: 12px; color: var(--ink); border-radius: 0;
-  }
-  .roster-item input.roster-name:focus { outline: none; border-bottom-color: var(--accent); border-bottom-style: solid; }
-  .roster-item .roster-stats {
-    font-family: 'JetBrains Mono', monospace; font-size: 9px;
-    color: var(--ink-faint); letter-spacing: 0.06em;
-  }
-  .roster-item .roster-remove {
-    background: transparent; border: 1px solid var(--accent);
-    color: var(--accent); padding: 3px 8px;
-    font-family: 'JetBrains Mono', monospace; font-size: 9px;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    cursor: pointer; border-radius: 0;
-  }
-  .roster-item .roster-remove:hover { background: var(--accent); color: var(--paper); }
-  .roster-add-row { display: flex; gap: 6px; }
-  .roster-add-row input { flex: 1; }
-
   .week-nav {
     display: flex; align-items: center; justify-content: center; gap: 14px;
     padding: 14px 36px 12px; border-bottom: 1px solid var(--ink); background: var(--paper);
@@ -520,38 +411,6 @@
   }
   .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 
-  /* ============== SYNC INDICATOR ============== */
-  .sync-pill {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 3px 9px; border: 1px solid var(--ink);
-    background: var(--paper); font-family: 'JetBrains Mono', monospace;
-    font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--ink-soft); margin-top: 4px; border-radius: 0;
-    transition: all 0.2s ease;
-  }
-  .sync-pill .dot {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: var(--moss); display: inline-block;
-  }
-  .sync-pill.synced .dot { background: var(--moss); animation: sync-pulse 2.4s ease-in-out infinite; }
-  .sync-pill.saving { background: var(--gold); color: var(--ink); border-color: var(--gold); }
-  .sync-pill.saving .dot { background: var(--ink); animation: sync-blink 0.8s ease-in-out infinite; }
-  .sync-pill.offline { background: var(--accent); color: var(--paper); border-color: var(--accent); }
-  .sync-pill.offline .dot { background: var(--paper); }
-  .sync-pill.connecting .dot { background: var(--ink-faint); animation: sync-blink 1.2s ease-in-out infinite; }
-  @keyframes sync-pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(90, 113, 72, 0.5); }
-    50%      { box-shadow: 0 0 0 4px rgba(90, 113, 72, 0); }
-  }
-  @keyframes sync-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-
-  /* Flash highlight for task cards changed by other clients */
-  @keyframes remote-flash {
-    0%   { box-shadow: 0 0 0 3px var(--gold), var(--shadow); background: #fffbe8; }
-    100% { box-shadow: var(--shadow); background: #fff; }
-  }
-  .task.remote-changed { animation: remote-flash 1.6s ease-out; }
-
   @media (max-width: 1100px) {
     .board { grid-template-columns: 240px repeat(7, 200px) 220px; }
   }
@@ -575,7 +434,7 @@
   <div class="masthead-row">
     <div class="mast-left">
       VOL. 01 — WK <span id="weekNum">17</span><br/>
-      <strong>WEEKLY PLANNER</strong> · TEAM LEDGERS
+      <strong>WEEKLY PLANNER</strong> · LOCAL LEDGER
     </div>
     <div class="mast-title">
       <h1>SHIFT <em>Ledger</em></h1>
@@ -584,17 +443,9 @@
     <div class="mast-right">
       <span id="todayLabel"></span><br/>
       <span id="clock"></span>
-      <div class="sync-pill connecting" id="syncPill"><span class="dot"></span><span id="syncText">Connecting…</span></div>
     </div>
   </div>
 </header>
-
-<div class="employee-strip" id="employeeStrip">
-  <div class="emp-strip-label">Employee:</div>
-  <div class="emp-tabs" id="empTabs"></div>
-  <button class="emp-add-btn" id="addEmployeeBtn" title="Add employee">+ Add</button>
-  <button class="emp-manage-btn" id="manageRosterBtn" title="Manage roster">⚙ Manage</button>
-</div>
 
 <div class="week-nav">
   <button id="prevWeek" title="Previous week (←)">← Prev</button>
@@ -661,7 +512,7 @@
 </div>
 
 <footer>
-  <div>SHIFT LEDGER · WEEKLY PLANNER · SHARED · LIVE SYNC · <strong style="color:var(--ink);">N</strong> NEW · <strong style="color:var(--ink);">←/→</strong> WEEK · <strong style="color:var(--ink);">T</strong> TODAY</div>
+  <div>SHIFT LEDGER · WEEKLY PLANNER · LOCAL STORAGE · <strong style="color:var(--ink);">N</strong> NEW · <strong style="color:var(--ink);">←/→</strong> WEEK · <strong style="color:var(--ink);">T</strong> TODAY</div>
   <div class="footer-actions">
     <button class="btn-ghost" id="copyWeekBtn">⎘ Copy Week →</button>
     <button class="btn-ghost" id="exportBtn">⤓ Export</button>
@@ -670,35 +521,6 @@
     <button class="btn-ghost" id="clearBtn" style="border-color:var(--accent);color:var(--accent);">⨯ Clear All</button>
   </div>
 </footer>
-
-<!-- ============== NO EMPLOYEES OVERLAY ============== -->
-<div class="no-employees-overlay" id="noEmployeesOverlay">
-  <div class="no-employees-card">
-    <h2>Set up your <em>team</em></h2>
-    <p>No employees yet. Add the first person to get started — anyone using this board can add more later.</p>
-    <input type="text" id="firstEmpName" placeholder="Employee name (e.g. Maria L.)" />
-    <button class="btn-primary" id="firstEmpAdd" style="width:100%;">+ Add to Roster</button>
-  </div>
-</div>
-
-<!-- ============== ROSTER MANAGE MODAL ============== -->
-<div class="modal-backdrop" id="rosterModal">
-  <div class="modal">
-    <h2>Manage <em>Roster</em></h2>
-    <div class="modal-sub">Add, rename, or remove employees</div>
-    <div class="roster-list" id="rosterList"></div>
-    <div class="roster-add-row">
-      <input type="text" id="rosterAddName" placeholder="New employee name" />
-      <button class="btn-primary" id="rosterAddBtn">+ Add</button>
-    </div>
-    <div class="modal-actions">
-      <div></div>
-      <div class="modal-actions-right" style="margin-left:auto;">
-        <button class="btn-primary" id="rosterClose">Done</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="modal-backdrop" id="taskModal">
   <div class="modal">
@@ -753,32 +575,8 @@
 
 <div class="toast" id="toast"></div>
 
-<script type="module">
-// ============== FIREBASE SETUP ==============
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
-import {
-  getFirestore, doc, setDoc, deleteDoc, getDoc, onSnapshot, serverTimestamp
-} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyDVtlBXAUT_9MYcEPVNDKrrsUxVfZLyjdo",
-  authDomain: "shift-ledger.firebaseapp.com",
-  projectId: "shift-ledger",
-  storageBucket: "shift-ledger.firebasestorage.app",
-  messagingSenderId: "684604708652",
-  appId: "1:684604708652:web:1a7c20cb10b30c3d11be89"
-};
-
-const fbApp = initializeApp(firebaseConfig);
-const db = getFirestore(fbApp);
-const ROSTER_REF = doc(db, 'boards', 'roster');
-function ledgerRef(employeeId) { return doc(db, 'ledgers', employeeId); }
-
-// Each browser session gets a random clientId (used to ignore our own snapshot echo)
-const CLIENT_ID = Math.random().toString(36).slice(2, 10);
-
-const STORAGE_KEY = 'shift-ledger-weekly-v1';      // per-employee cache, keyed by employee id (suffix added at use)
-const VIEWED_KEY  = 'shift-ledger-viewed-v1';      // remembers which employee was last viewed
+<script>
+const STORAGE_KEY = 'shift-ledger-weekly-v1';
 const DAY_NAMES_SHORT = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 const DEFAULT_DAY_CAPACITY = { 0: 0, 1: 8, 2: 8, 3: 8, 4: 8, 5: 8, 6: 0 };
 
@@ -809,301 +607,50 @@ const THIS_WEEK_START = localISO(startOfWeek(new Date()));
 const DEFAULT_STATE = {
   weeklyGoalHours: 40,
   dayCapacity: { ...DEFAULT_DAY_CAPACITY },
-  tasks: [],
+  tasks: [
+    { id: 't-1', title: 'Inventory audit (back room)', notes: 'Full count of dry goods.', priority: 'low', estHours: 3, loggedHours: 0, scheduled: null, status: 'open', tags: ['inventory'], repeat: [], timerStart: null, createdAt: Date.now() - 50000000 },
+    { id: 't-2', title: 'Update employee handbook', notes: '', priority: 'low', estHours: 2, loggedHours: 0, scheduled: null, status: 'open', tags: ['admin'], repeat: [], timerStart: null, createdAt: Date.now() - 50000000 },
+    { id: 't-3', title: 'Open store / count register', notes: 'Drawer = $200.', priority: 'high', estHours: 0.5, loggedHours: 0, scheduled: addDaysISO(THIS_WEEK_START, 0), status: 'open', tags: ['opening','register'], repeat: [1,2,3,4,5], timerStart: null, createdAt: Date.now() - 30000000 },
+    { id: 't-4', title: 'Restock cold case', notes: 'Dairy + grab-and-go.', priority: 'med', estHours: 1.5, loggedHours: 0, scheduled: addDaysISO(THIS_WEEK_START, 0), status: 'open', tags: ['floor','restock'], repeat: [], timerStart: null, createdAt: Date.now() - 28000000 },
+    { id: 't-5', title: 'Train new hire on POS', notes: 'Returns + voids.', priority: 'high', estHours: 2, loggedHours: 0, scheduled: addDaysISO(THIS_WEEK_START, 1), status: 'open', tags: ['training'], repeat: [], timerStart: null, createdAt: Date.now() - 25000000 },
+    { id: 't-6', title: 'Vendor delivery — produce', notes: '10am window.', priority: 'med', estHours: 1, loggedHours: 0, scheduled: addDaysISO(THIS_WEEK_START, 1), status: 'open', tags: ['receiving'], repeat: [], timerStart: null, createdAt: Date.now() - 24000000 },
+    { id: 't-7', title: 'Submit weekly availability', notes: 'To manager by EOD.', priority: 'high', estHours: 0.25, loggedHours: 0, scheduled: addDaysISO(THIS_WEEK_START, 2), status: 'open', tags: ['admin'], repeat: [], timerStart: null, createdAt: Date.now() - 20000000 },
+    { id: 't-8', title: 'Deep clean coffee station', notes: '', priority: 'med', estHours: 1, loggedHours: 0, scheduled: addDaysISO(THIS_WEEK_START, 2), status: 'open', tags: ['cleaning'], repeat: [], timerStart: null, createdAt: Date.now() - 19000000 },
+    { id: 't-9', title: 'Run end-of-day report', notes: '', priority: 'med', estHours: 0.5, loggedHours: 0, scheduled: addDaysISO(THIS_WEEK_START, 3), status: 'open', tags: ['closing','admin'], repeat: [4], timerStart: null, createdAt: Date.now() - 15000000 },
+    { id: 't-10', title: 'Prep weekend display', notes: 'Front-end seasonal items.', priority: 'med', estHours: 1.5, loggedHours: 0, scheduled: addDaysISO(THIS_WEEK_START, 4), status: 'open', tags: ['floor'], repeat: [], timerStart: null, createdAt: Date.now() - 12000000 }
+  ],
   filter: 'all',
   activeTagFilters: [],
   search: ''
 };
 
-// ============== ROSTER + PER-EMPLOYEE STATE SYNC ==============
-// roster: { employees: [{ id, name, color, createdAt }], _meta }
-// ledgers/{id}: { tasks, dayCapacity, weeklyGoalHours, _meta }
-
-let syncStatus = 'connecting'; // 'connecting' | 'synced' | 'offline' | 'saving' | 'no-employees'
-let lastSyncedAt = null;
-let lastEditedBy = null;
-let activeWriters = 0;
-
-let roster = { employees: [] };
-let viewedEmployeeId = null;          // whose ledger we're currently looking at
-let unsubLedger = null;               // teardown for the current ledger snapshot
-
-function localCacheKey(empId) { return STORAGE_KEY + ':' + empId; }
-
-function loadStateFromCache(empId) {
-  if (!empId) return JSON.parse(JSON.stringify(DEFAULT_STATE));
+function loadState() {
   try {
-    const raw = localStorage.getItem(localCacheKey(empId));
+    const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return JSON.parse(JSON.stringify(DEFAULT_STATE));
-    return mergeIntoDefaults(JSON.parse(raw));
+    const parsed = JSON.parse(raw);
+    return {
+      ...JSON.parse(JSON.stringify(DEFAULT_STATE)),
+      ...parsed,
+      tasks: (parsed.tasks || []).map(t => ({
+        status: 'open', scheduled: null, repeat: [], loggedHours: 0,
+        timerStart: null, tags: [], ...t
+      })),
+      dayCapacity: { ...DEFAULT_DAY_CAPACITY, ...(parsed.dayCapacity || {}) }
+    };
   } catch (e) {
-    console.error('cache load failed', e);
+    console.error('load failed', e);
     return JSON.parse(JSON.stringify(DEFAULT_STATE));
   }
 }
 
-function mergeIntoDefaults(parsed) {
-  return {
-    ...JSON.parse(JSON.stringify(DEFAULT_STATE)),
-    ...parsed,
-    tasks: (parsed.tasks || []).map(t => ({
-      status: 'open', scheduled: null, repeat: [], loggedHours: 0,
-      timerStart: null, tags: [], ...t
-    })),
-    dayCapacity: { ...DEFAULT_DAY_CAPACITY, ...(parsed.dayCapacity || {}) }
-  };
-}
-
-function cacheLocally() {
-  if (!viewedEmployeeId) return;
-  try { localStorage.setItem(localCacheKey(viewedEmployeeId), JSON.stringify(state)); }
-  catch (e) { /* quota etc. */ }
-}
-
-let saveDebounce = null;
 function saveState() {
-  cacheLocally();
-  if (!viewedEmployeeId) return;
-  clearTimeout(saveDebounce);
-  setSyncStatus('saving');
-  saveDebounce = setTimeout(pushToCloud, 500);
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+  catch (e) { showToast('Save failed'); }
 }
 
-async function pushToCloud() {
-  if (!viewedEmployeeId) return;
-  activeWriters++;
-  const targetEmpId = viewedEmployeeId; // capture in case user switches mid-write
-  try {
-    const payload = {
-      tasks: state.tasks.map(t => {
-        const { timerStart, ...rest } = t;
-        return rest;
-      }),
-      dayCapacity: state.dayCapacity,
-      weeklyGoalHours: state.weeklyGoalHours,
-      _meta: { lastEditedBy: CLIENT_ID, lastEditedAt: serverTimestamp() }
-    };
-    await setDoc(ledgerRef(targetEmpId), payload, { merge: false });
-    setSyncStatus('synced');
-    lastSyncedAt = Date.now();
-  } catch (e) {
-    console.error('cloud save failed', e);
-    setSyncStatus('offline');
-  } finally {
-    activeWriters--;
-  }
-}
-
-function setSyncStatus(s) {
-  syncStatus = s;
-  renderSyncIndicator();
-}
-
-let prevTaskSig = new Map();
-function taskSig(t) {
-  return JSON.stringify({
-    title: t.title, notes: t.notes, priority: t.priority,
-    estHours: t.estHours, scheduled: t.scheduled, status: t.status,
-    tags: t.tags, repeat: t.repeat
-  });
-}
-function snapshotTaskSigs() {
-  const m = new Map();
-  state.tasks.forEach(t => m.set(t.id, taskSig(t)));
-  return m;
-}
-let flashTaskIds = new Set();
-
-function applyRemoteState(remote, fromSelf) {
-  const newSigs = new Map();
-  (remote.tasks || []).forEach(t => newSigs.set(t.id, taskSig(t)));
-  if (!fromSelf) {
-    flashTaskIds = new Set();
-    newSigs.forEach((sig, id) => {
-      if (prevTaskSig.get(id) !== sig) flashTaskIds.add(id);
-    });
-  }
-  prevTaskSig = newSigs;
-
-  const localTimers = new Map();
-  state.tasks.forEach(t => { if (t.timerStart) localTimers.set(t.id, t.timerStart); });
-
-  state = mergeIntoDefaults({
-    tasks: remote.tasks || [],
-    dayCapacity: remote.dayCapacity || {},
-    weeklyGoalHours: remote.weeklyGoalHours,
-    filter: state.filter,
-    activeTagFilters: state.activeTagFilters,
-    search: state.search
-  });
-  state.tasks.forEach(t => {
-    if (localTimers.has(t.id)) t.timerStart = localTimers.get(t.id);
-  });
-
-  cacheLocally();
-  if (remote._meta && remote._meta.lastEditedBy) lastEditedBy = remote._meta.lastEditedBy;
-  lastSyncedAt = Date.now();
-  setSyncStatus('synced');
-
-  const activeEl = document.activeElement;
-  const isEditing = activeEl && (activeEl.matches('[contenteditable="true"]') || activeEl.matches('input, textarea, select'));
-  const modalOpen = document.getElementById('taskModal').classList.contains('show')
-    || document.getElementById('rosterModal').classList.contains('show');
-  if (isEditing || modalOpen) {
-    pendingRemoteRender = true;
-    renderSyncIndicator();
-    return;
-  }
-  render();
-}
-
-let pendingRemoteRender = false;
-function flushPendingRenderIfIdle() {
-  if (!pendingRemoteRender) return;
-  const activeEl = document.activeElement;
-  const isEditing = activeEl && (activeEl.matches('[contenteditable="true"]') || activeEl.matches('input, textarea, select'));
-  const modalOpen = document.getElementById('taskModal').classList.contains('show')
-    || document.getElementById('rosterModal').classList.contains('show');
-  if (!isEditing && !modalOpen) {
-    pendingRemoteRender = false;
-    render();
-  }
-}
-document.addEventListener('focusout', () => setTimeout(flushPendingRenderIfIdle, 50), true);
-
-// ----- Roster subscription -----
-let rosterFirstSnapshot = true;
-onSnapshot(ROSTER_REF, async (snap) => {
-  if (!snap.exists()) {
-    if (rosterFirstSnapshot) {
-      rosterFirstSnapshot = false;
-      // Seed an empty roster so subsequent writes don't 404
-      try { await setDoc(ROSTER_REF, { employees: [], _meta: { lastEditedBy: CLIENT_ID, lastEditedAt: serverTimestamp() } }); }
-      catch (e) { console.error('roster seed failed', e); }
-    }
-    return;
-  }
-  rosterFirstSnapshot = false;
-  const data = snap.data();
-  roster = { employees: data.employees || [] };
-  // If we don't have anyone selected yet, pick the remembered one or the first available
-  if (!viewedEmployeeId && roster.employees.length > 0) {
-    const remembered = localStorage.getItem(VIEWED_KEY);
-    const found = remembered && roster.employees.find(e => e.id === remembered);
-    switchToEmployee(found ? found.id : roster.employees[0].id);
-  } else if (viewedEmployeeId && !roster.employees.find(e => e.id === viewedEmployeeId)) {
-    // Currently-viewed employee was removed from the roster
-    if (roster.employees.length > 0) switchToEmployee(roster.employees[0].id);
-    else { unsubFromLedger(); state = JSON.parse(JSON.stringify(DEFAULT_STATE)); viewedEmployeeId = null; setSyncStatus('no-employees'); render(); }
-  } else {
-    renderRosterStrip();
-  }
-}, (err) => {
-  console.error('roster snapshot error', err);
-  setSyncStatus('offline');
-});
-
-// ----- Per-employee ledger subscription -----
-function unsubFromLedger() {
-  if (unsubLedger) { unsubLedger(); unsubLedger = null; }
-}
-
-let ledgerFirstSnapshot = true;
-function subscribeToLedger(empId) {
-  unsubFromLedger();
-  ledgerFirstSnapshot = true;
-  state = loadStateFromCache(empId);
-  prevTaskSig = snapshotTaskSigs();
-  setSyncStatus('connecting');
-  unsubLedger = onSnapshot(ledgerRef(empId), async (snap) => {
-    if (!snap.exists()) {
-      if (ledgerFirstSnapshot && empId === viewedEmployeeId) {
-        ledgerFirstSnapshot = false;
-        await pushToCloud(); // create the doc with whatever's local (likely defaults)
-      }
-      return;
-    }
-    ledgerFirstSnapshot = false;
-    const data = snap.data();
-    const fromSelf = data._meta && data._meta.lastEditedBy === CLIENT_ID;
-    if (fromSelf && activeWriters > 0) return;
-    applyRemoteState(data, fromSelf);
-  }, (err) => {
-    console.error('ledger snapshot error', err);
-    setSyncStatus('offline');
-  });
-  render();
-}
-
-function switchToEmployee(empId) {
-  if (empId === viewedEmployeeId) return;
-  viewedEmployeeId = empId;
-  try { localStorage.setItem(VIEWED_KEY, empId); } catch {}
-  subscribeToLedger(empId);
-}
-
-// ----- Roster mutations -----
-async function pushRoster() {
-  try {
-    await setDoc(ROSTER_REF, {
-      employees: roster.employees,
-      _meta: { lastEditedBy: CLIENT_ID, lastEditedAt: serverTimestamp() }
-    }, { merge: false });
-  } catch (e) {
-    console.error('roster push failed', e);
-    showToast('Roster save failed');
-  }
-}
-
-const EMPLOYEE_COLORS = ['#b14a2c','#5a7148','#c9962b','#3a4862','#6e5d3a','#8a3620','#3f5132','#968a6c'];
-
-async function addEmployee(name) {
-  name = (name || '').trim();
-  if (!name) return null;
-  if (roster.employees.some(e => e.name.toLowerCase() === name.toLowerCase())) {
-    showToast('Name already exists');
-    return null;
-  }
-  const id = 'emp-' + Math.random().toString(36).slice(2, 9);
-  const color = EMPLOYEE_COLORS[roster.employees.length % EMPLOYEE_COLORS.length];
-  roster.employees.push({ id, name, color, createdAt: Date.now() });
-  await pushRoster();
-  showToast(`Added ${name}`);
-  return id;
-}
-
-async function removeEmployee(empId) {
-  const emp = roster.employees.find(e => e.id === empId);
-  if (!emp) return;
-  if (!confirm(`Remove ${emp.name} from the roster? Their ledger data will also be deleted. This cannot be undone.`)) return;
-  roster.employees = roster.employees.filter(e => e.id !== empId);
-  await pushRoster();
-  try { await deleteDoc(ledgerRef(empId)); } catch (e) { console.error('ledger delete failed', e); }
-  try { localStorage.removeItem(localCacheKey(empId)); } catch {}
-  showToast(`Removed ${emp.name}`);
-}
-
-async function renameEmployee(empId, newName) {
-  newName = (newName || '').trim();
-  if (!newName) return;
-  const emp = roster.employees.find(e => e.id === empId);
-  if (!emp) return;
-  if (roster.employees.some(e => e.id !== empId && e.name.toLowerCase() === newName.toLowerCase())) {
-    showToast('Name already exists');
-    return;
-  }
-  emp.name = newName;
-  await pushRoster();
-}
-
-window.addEventListener('online', () => {
-  if (syncStatus === 'offline') { setSyncStatus('saving'); pushToCloud(); }
-});
-window.addEventListener('offline', () => setSyncStatus('offline'));
-
-let state = JSON.parse(JSON.stringify(DEFAULT_STATE));
+let state = loadState();
 let viewWeekStart = THIS_WEEK_START;
-prevTaskSig = snapshotTaskSigs();
 
 function uid(prefix='id') { return prefix + '-' + Math.random().toString(36).slice(2, 9); }
 function fmtHours(h) {
@@ -1270,111 +817,13 @@ function ensureRepeatedTasksForWeek(weekStartISO) {
 }
 
 function render() {
-  renderRosterStrip();
-  renderNoEmployeesOverlay();
-  if (!viewedEmployeeId || roster.employees.length === 0) {
-    // Don't render the board itself if no employee selected yet
-    renderSyncIndicator();
-    return;
-  }
   ensureRepeatedTasksForWeek(viewWeekStart);
   renderWeekLabel();
   renderBoard();
   renderTagFilters();
   renderFilterPills();
   updateMetrics();
-  renderSyncIndicator();
   document.getElementById('goalInput').value = state.weeklyGoalHours;
-  if (flashTaskIds.size > 0) {
-    setTimeout(() => { flashTaskIds = new Set(); }, 1700);
-  }
-}
-
-function renderRosterStrip() {
-  const tabs = document.getElementById('empTabs');
-  if (!tabs) return;
-  if (roster.employees.length === 0) {
-    tabs.innerHTML = '<span style="font-family:JetBrains Mono,monospace;font-size:10px;color:var(--ink-faint);letter-spacing:0.1em;">— no employees yet —</span>';
-    return;
-  }
-  tabs.innerHTML = roster.employees.map(emp => `
-    <button class="emp-tab ${emp.id === viewedEmployeeId ? 'active' : ''}" data-emp-id="${escapeHtml(emp.id)}">
-      <span class="swatch" style="background:${escapeHtml(emp.color || '#888')};"></span>
-      <span class="name">${escapeHtml(emp.name)}</span>
-    </button>
-  `).join('');
-  tabs.querySelectorAll('[data-emp-id]').forEach(btn => {
-    btn.addEventListener('click', () => switchToEmployee(btn.dataset.empId));
-  });
-}
-
-function renderNoEmployeesOverlay() {
-  const ov = document.getElementById('noEmployeesOverlay');
-  if (!ov) return;
-  ov.classList.toggle('show', roster.employees.length === 0 && !rosterFirstSnapshot);
-}
-
-function renderSyncIndicator() {
-  const pill = document.getElementById('syncPill');
-  const text = document.getElementById('syncText');
-  if (!pill || !text) return;
-  pill.classList.remove('synced','saving','offline','connecting','no-employees');
-  pill.classList.add(syncStatus);
-  let label = 'Connecting…';
-  if (syncStatus === 'synced') {
-    const emp = roster.employees.find(e => e.id === viewedEmployeeId);
-    label = emp ? `Synced · ${emp.name}` : 'Synced · live';
-  } else if (syncStatus === 'saving') {
-    label = 'Saving…';
-  } else if (syncStatus === 'offline') {
-    label = 'Offline · cached';
-  } else if (syncStatus === 'no-employees') {
-    label = 'No employee selected';
-  }
-  text.textContent = label;
-}
-
-function renderRosterModal() {
-  const list = document.getElementById('rosterList');
-  if (!list) return;
-  if (roster.employees.length === 0) {
-    list.innerHTML = '<div style="font-family:JetBrains Mono,monospace;font-size:10px;color:var(--ink-faint);text-align:center;padding:12px;">No employees yet</div>';
-    return;
-  }
-  list.innerHTML = roster.employees.map(emp => `
-    <div class="roster-item" data-emp-row="${escapeHtml(emp.id)}">
-      <span class="swatch" style="background:${escapeHtml(emp.color || '#888')};"></span>
-      <input type="text" class="roster-name" value="${escapeHtml(emp.name)}" data-rename-id="${escapeHtml(emp.id)}" />
-      <span class="roster-stats" data-emp-stats="${escapeHtml(emp.id)}">—</span>
-      <button class="roster-remove" data-remove-id="${escapeHtml(emp.id)}">Remove</button>
-    </div>
-  `).join('');
-  list.querySelectorAll('[data-rename-id]').forEach(inp => {
-    inp.addEventListener('blur', () => {
-      const id = inp.dataset.renameId;
-      const newName = inp.value.trim();
-      const emp = roster.employees.find(e => e.id === id);
-      if (emp && newName && newName !== emp.name) renameEmployee(id, newName);
-    });
-    inp.addEventListener('keydown', e => { if (e.key === 'Enter') inp.blur(); });
-  });
-  list.querySelectorAll('[data-remove-id]').forEach(btn => {
-    btn.addEventListener('click', () => removeEmployee(btn.dataset.removeId));
-  });
-  // Lazily fetch each employee's task count from cache for a quick stat
-  list.querySelectorAll('[data-emp-stats]').forEach(span => {
-    const id = span.dataset.empStats;
-    try {
-      const cached = localStorage.getItem(localCacheKey(id));
-      if (cached) {
-        const parsed = JSON.parse(cached);
-        const open = (parsed.tasks || []).filter(t => t.status !== 'done').length;
-        span.textContent = `${open} open`;
-      } else {
-        span.textContent = id === viewedEmployeeId ? `${state.tasks.filter(t => t.status !== 'done').length} open` : '—';
-      }
-    } catch { span.textContent = '—'; }
-  });
 }
 
 function renderWeekLabel() {
@@ -1419,7 +868,7 @@ function renderTagFilters() {
       const i = state.activeTagFilters.indexOf(tg);
       if (i >= 0) state.activeTagFilters.splice(i, 1);
       else state.activeTagFilters.push(tg);
-      cacheLocally(); render();
+      saveState(); render();
     });
   });
 }
@@ -1542,7 +991,7 @@ function renderDoneColumn() {
 
 function renderTask(t) {
   const el = document.createElement('div');
-  el.className = 'task' + (t.status === 'done' ? ' is-done' : '') + (flashTaskIds.has(t.id) ? ' remote-changed' : '');
+  el.className = 'task' + (t.status === 'done' ? ' is-done' : '');
   el.dataset.taskId = t.id;
   el.draggable = true;
   const isTiming = !!t.timerStart;
@@ -1645,7 +1094,7 @@ function attachTaskHandlers() {
       const i = state.activeTagFilters.indexOf(t);
       if (i >= 0) state.activeTagFilters.splice(i, 1);
       else state.activeTagFilters.push(t);
-      cacheLocally(); render();
+      saveState(); render();
     });
   });
   document.querySelectorAll('[data-cap-dow]').forEach(inp => {
@@ -1913,9 +1362,6 @@ function exportJSON() {
 }
 
 function importJSON(file) {
-  const emp = roster.employees.find(e => e.id === viewedEmployeeId);
-  const empName = emp ? emp.name : 'this employee';
-  if (!confirm(`Importing replaces ${empName}'s ledger for everyone viewing it. Continue?`)) return;
   const reader = new FileReader();
   reader.onload = e => {
     try {
@@ -1923,14 +1369,14 @@ function importJSON(file) {
       if (!data.tasks) throw new Error('Invalid file');
       state = { ...DEFAULT_STATE, ...data, dayCapacity: { ...DEFAULT_DAY_CAPACITY, ...(data.dayCapacity || {}) } };
       saveState(); render();
-      showToast('Imported · syncing to all');
+      showToast('Imported');
     } catch (err) { showToast('Import failed'); }
   };
   reader.readAsText(file);
 }
 
 document.querySelectorAll('.filter-pill[data-filter]').forEach(b => {
-  b.addEventListener('click', () => { state.filter = b.dataset.filter; cacheLocally(); render(); });
+  b.addEventListener('click', () => { state.filter = b.dataset.filter; saveState(); render(); });
 });
 document.getElementById('searchInput').addEventListener('input', e => { state.search = e.target.value; renderBoard(); });
 document.getElementById('goalInput').addEventListener('change', e => {
@@ -1946,7 +1392,7 @@ document.getElementById('modalSave').addEventListener('click', saveModal);
 document.getElementById('modalDelete').addEventListener('click', deleteCurrentTask);
 document.getElementById('taskModal').addEventListener('click', e => { if (e.target.id === 'taskModal') closeModal(); });
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { closeModal(); closeRosterModal(); }
+  if (e.key === 'Escape') closeModal();
   const inField = e.target.matches('input, textarea, [contenteditable="true"]');
   if (inField) return;
   if (e.key === 'n' || e.key === 'N') { e.preventDefault(); openTaskModal(); }
@@ -1962,67 +1408,14 @@ document.getElementById('importFile').addEventListener('change', e => {
   e.target.value = '';
 });
 document.getElementById('clearBtn').addEventListener('click', () => {
-  if (!viewedEmployeeId) return;
-  const emp = roster.employees.find(e => e.id === viewedEmployeeId);
-  const name = emp ? emp.name : 'this employee';
-  if (confirm(`Clear ALL of ${name}'s ledger? This wipes their tasks for everyone viewing and cannot be undone.`)) {
+  if (confirm('Clear ALL data? This cannot be undone.')) {
+    localStorage.removeItem(STORAGE_KEY);
     state = JSON.parse(JSON.stringify(DEFAULT_STATE));
     viewWeekStart = THIS_WEEK_START;
     saveState(); render();
-    showToast(`Cleared ${name}'s ledger`);
+    showToast('Cleared');
   }
 });
-
-// ============== ROSTER & EMPLOYEE WIRING ==============
-function openRosterModal() {
-  renderRosterModal();
-  document.getElementById('rosterModal').classList.add('show');
-}
-function closeRosterModal() {
-  document.getElementById('rosterModal').classList.remove('show');
-}
-
-document.getElementById('manageRosterBtn').addEventListener('click', openRosterModal);
-document.getElementById('rosterClose').addEventListener('click', closeRosterModal);
-document.getElementById('rosterModal').addEventListener('click', e => {
-  if (e.target.id === 'rosterModal') closeRosterModal();
-});
-
-document.getElementById('addEmployeeBtn').addEventListener('click', async () => {
-  const name = prompt('Employee name:');
-  if (!name) return;
-  const newId = await addEmployee(name);
-  if (newId) switchToEmployee(newId);
-});
-
-document.getElementById('rosterAddBtn').addEventListener('click', async () => {
-  const inp = document.getElementById('rosterAddName');
-  const name = inp.value.trim();
-  if (!name) return;
-  const newId = await addEmployee(name);
-  inp.value = '';
-  if (newId && !viewedEmployeeId) switchToEmployee(newId);
-  renderRosterModal();
-});
-document.getElementById('rosterAddName').addEventListener('keydown', e => {
-  if (e.key === 'Enter') { e.preventDefault(); document.getElementById('rosterAddBtn').click(); }
-});
-
-// First-employee overlay
-document.getElementById('firstEmpAdd').addEventListener('click', async () => {
-  const inp = document.getElementById('firstEmpName');
-  const name = inp.value.trim();
-  if (!name) { inp.focus(); return; }
-  const newId = await addEmployee(name);
-  inp.value = '';
-  if (newId) switchToEmployee(newId);
-});
-document.getElementById('firstEmpName').addEventListener('keydown', e => {
-  if (e.key === 'Enter') { e.preventDefault(); document.getElementById('firstEmpAdd').click(); }
-});
-
-// Esc closes roster modal too
-const origKeydown = document.querySelector('script[type="module"]'); // marker, no-op
 
 function updateClock() {
   const now = new Date();
